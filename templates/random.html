@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='favicon.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="head">
+        <div class="inhead">
+            <p id="head-title">RANDOM</p><br>
+            <p id="head-add">ADD YOUR OWN</p>
+        </div>
+        <p id="head-desc">a database of random shit</p>
+    </div>
+    <main>
+        <center>
+            <br>
+            <p>{{id}}. {{ random['random-title'] }}</p>
+            <p style="font-family: 'montserrat'; text-align: left; margin-left: 3em;">detail:</p> 
+            <textarea name="" readonly id="" style="resize: none; width: 90%; border-radius: 1em; height: 20em; outline: none; padding: 2em 2em 2em 2em; font-family: 'Montserrat'; background: #181818; border: none; color: rgb(255, 255, 255);">{{random['random-detail']}}</textarea>
+        </center>
+    </main>
+    <p id="what">what am i doing wit my life</p>
+    <a href="/" id="back">home</a>
+    <div class="add">
+        <p id="add-close">X</p>
+        <div class="add-main">
+            <p id="add-title">Add Random</p>
+            <form action="" method="post" id="add-form">
+                <label for="random-title" class="labell">Title</label><br>
+                <input type="text" required name="random-title" id="" class="inpoot">
+                <br><br>
+                <label for="random-desc" class="labell">Description</label><br>
+                <textarea type="text" required name="random-desc" id="" style="resize:none; width: 90%; height: 8em; padding-top: 1em;" class="inpoot"></textarea>
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script>
+    if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}  
+$("#head-add").click(function(){
+        $(".add").fadeIn()
+    })
+    if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+
+    $("#add-close").click(function(){
+        $(".add").fadeOut()
+    })
+</script>
