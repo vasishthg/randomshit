@@ -53,6 +53,7 @@ body{
 
 ::-webkit-scrollbar {
     width: 6px;
+    height: 0;
 }
   
 ::-webkit-scrollbar-track {
@@ -161,8 +162,8 @@ body{
 #add-close{
     position: absolute;
     cursor: pointer;
-    left: 74%;
-    top: 20%;
+    right: 2em;
+    top: 2em;
 }
 
 
@@ -190,4 +191,28 @@ main{
     font-family: 'Montserrat';
     color: #AAAAAA;
     left: 2em;
+}
+
+@media screen and (max-width:755px) {
+    .add-main{
+        width: 40em;
+    }
+}
+
+@media screen and (max-width:658px) {
+    .add-main{
+        width: 30em;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .add-main{
+        width: 20em;
+        padding-right: 1em;
+    }
+}
+
+
+*{
+    overflow-anchor: none;
 }
